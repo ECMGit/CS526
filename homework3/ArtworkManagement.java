@@ -1,6 +1,5 @@
 /**
  * homework3 of Junhao Shen;
- * Any question, please email to: busjh@bu.edu
  * added 2 method in SinglylinkedList.java
  * date: 02/12/2018
  */
