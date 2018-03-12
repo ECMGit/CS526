@@ -1,0 +1,18 @@
+LinkedStack<Integer> stack;
+int num = 0;
+char sign = +;
+
+    for i : string_exp.length
+    if(string_exp.char(i) is Digit){
+    num = num*10 + string_exp.char(i)- '0';
+        if((string_exp.char(i) is not a Digit){
+            switch(sign){
+                    case '-': stack.push(-num);
+                    case '+': stack.push(num);
+                    case '*': stack.push(stack.pop()*num);
+                    case '/': stack.push(stack.pop()/num);
+                        }
+                    sign = string_exp.charAt(i);
+                    num = 0;
+                }
+    }
