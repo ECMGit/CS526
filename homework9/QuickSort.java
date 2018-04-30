@@ -1,5 +1,13 @@
 package hw9;
 
+
+/**
+ * this sort clearly realize divide and conquer design pattern
+ * every loop set a pivot and exchange position of each integer,
+ * when loop ends, all integer smaller than pivot should stay in right side of pivot, all integer larger than pivot should stay in left side of pivot
+ * then recursive right sub array and left sub array.
+ */
+
 public class QuickSort {
 
     public void sort(int[] arr, int low, int high) {

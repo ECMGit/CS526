@@ -1,7 +1,9 @@
 package hw9;
 
 
+import java.util.Arrays;
 import java.util.Random;
+
 public class SortingComparison {
 
 
@@ -49,11 +51,17 @@ public class SortingComparison {
 
         //this line shows the table's title
         String[] title = {"n\nalgorithms", "10000", "20000", "30000", "40000", "50000", "60000", "70000", "80000", "90000", "100000"};
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 2; i++) {
             int[] a = new int[i * 10000];
             for (int j = 0; j < i * 10000; j++) {
                 a[j] = r.nextInt(1000000) + 1;
             }
+
+            //test array
+//            int[] a = new int[i*10];
+//            for (int j = 0; j < i * 10; j++) {
+//                a[j] = r.nextInt(100) + 1;
+//            }
             //insert each running result into array
             data[0][i] = String.valueOf(SortingComparison.comparingSort(a, "insertionsort"));
             data[1][i] = String.valueOf(SortingComparison.comparingSort(a, "quicksort"));
@@ -61,14 +69,14 @@ public class SortingComparison {
             data[3][i] = String.valueOf(SortingComparison.comparingSort(a, "heapsort"));
 //            System.out.print(Arrays.toString(a));
         }
-       TimeComplexityTable table = new TimeComplexityTable(data, title);
+        TimeComplexityTable table = new TimeComplexityTable(data, title);
         XYChart chart = new XYChart();
         //add each agorithm line into graph
-        chart.addLine(title,data[0]);
-        chart.addLine(title,data[1]);
-        chart.addLine(title,data[2]);
-        chart.addLine(title,data[3]);
-        new TimeCompGroup(table,chart);
+        chart.addLine(title, data[0]);
+        chart.addLine(title, data[1]);
+        chart.addLine(title, data[2]);
+        chart.addLine(title, data[3]);
+        new TimeCompGroup(table, chart);
     }
 }
 
